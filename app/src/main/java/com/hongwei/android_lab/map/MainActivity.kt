@@ -8,6 +8,7 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.hongwei.android_lab.databinding.ActivityMainBinding
+import com.hongwei.android_lab.map.regex.RegexTest
 import com.hongwei.android_lab.map.rx3.Rx3Test
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -39,7 +40,8 @@ class MainActivity : AppCompatActivity() {
         val html = "<b>Location:</b> Sydney, Australia"
         viewBinding.description.text = HtmlCompat.fromHtml(html, HtmlCompat.FROM_HTML_MODE_LEGACY)
 
-        Rx3Test().testMergeCompletables()
+//        Rx3Test().testMergeCompletables()
+        RegexTest().test()
     }
 
     private fun GoogleMap.disableAllMapInteractions() {

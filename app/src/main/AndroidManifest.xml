@@ -13,9 +13,12 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
+
+        <activity android:name=".map.MainActivity" />
         <activity
-            android:name=".map.MainActivity"
-            android:label="@string/title_activity_main">
+            android:name=".map.mapview.MapViewActivity"
+            android:label="@string/title_activity_mapview" />
+        <activity android:name=".map.compose.ContainerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

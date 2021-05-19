@@ -2,4 +2,7 @@
     <string name="app_name">android-lab</string>
 
     <string name="title_activity_mapview">Activity With MapView</string>
+
+    <string name="rates_loading">Placeholder</string>
+    <string name="rates_balance">Balance</string>
 </resources>

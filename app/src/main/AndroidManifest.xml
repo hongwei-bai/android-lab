@@ -3,7 +3,7 @@
     package="com.hongwei.android_lab">
 
     <application
-        android:name=".map.LabApp"
+        android:name=".lab.LabApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,18 +13,21 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".map.MainActivity" />
-        <activity
-            android:name=".map.mapview.MapViewActivity"
-            android:label="@string/title_activity_mapview" />
-        <activity android:name=".map.compose.ContainerActivity">
+        <activity android:name=".lab.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".lab.mapview.MapViewActivity"
+            android:label="@string/title_activity_mapview" />
+        <activity android:name=".lab.compose.ContainerActivity" />
     </application>
 
 </manifest>

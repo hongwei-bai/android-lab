@@ -3,7 +3,7 @@ package com.hongwei.android_lab.lab.compose.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
-import com.hongwei.android_lab.lab.compose.view.AccountHeaderViewObject
+import com.hongwei.android_lab.lab.compose.demo.reuse.AccountHeaderViewObject
 import com.hongwei.android_lab.lab.compose.view.RatesBreakdownViewObject.RateNoBonusViewObject
 import com.hongwei.android_lab.lab.compose.view.RatesBreakdownViewObject.RateWithBonusViewObject
 import com.hongwei.android_lab.lab.compose.view.RatesDetailViewObject

@@ -5,4 +5,6 @@
 
     <string name="rates_loading">Placeholder</string>
     <string name="rates_balance">Balance</string>
+
+    <string name="hello_world">Hello World</string>
 </resources>

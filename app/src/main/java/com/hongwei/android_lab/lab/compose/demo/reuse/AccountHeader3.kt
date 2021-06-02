@@ -7,31 +7,25 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.tooling.preview.PreviewParameter
-import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
 import com.hongwei.android_lab.R
 
 
-class AccountProvider : PreviewParameterProvider<AccountHeaderViewObject?> {
-    override val values =
-        sequenceOf(AccountHeaderViewObject("Netbank Saver", "Netbank Saver", "$8.66"))
-    override val count: Int = values.count()
-}
-
-@Preview
 @Composable
-fun AccountHeader(@PreviewParameter(AccountProvider::class) account: AccountHeaderViewObject?) {
+fun AccountHeader3(
+    account: AccountHeaderViewObject3?,
+    modifier: Modifier = Modifier
+) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .wrapContentHeight()
             .background(color = MaterialTheme.colors.primary)
             .padding(32.dp)
+            .then(modifier)
     ) {
         if (account == null) {
-            Placeholder(modifier = Modifier.height(120.dp))
+            Placeholder3(modifier = Modifier.height(120.dp))
         } else {
             Text(
                 text = account.accountNickName,
@@ -65,7 +59,7 @@ fun AccountHeader(@PreviewParameter(AccountProvider::class) account: AccountHead
 }
 
 @Composable
-fun Placeholder(modifier: Modifier = Modifier) {
+fun Placeholder3(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .fillMaxWidth()
@@ -77,7 +71,7 @@ fun Placeholder(modifier: Modifier = Modifier) {
     }
 }
 
-data class AccountHeaderViewObject(
+data class AccountHeaderViewObject3(
     val accountNickName: String,
     val accountType: String,
     val balance: String

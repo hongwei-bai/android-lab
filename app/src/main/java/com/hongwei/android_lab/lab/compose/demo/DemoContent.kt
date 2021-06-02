@@ -16,9 +16,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
+import com.hongwei.android_lab.lab.compose.demo.dataflow.DataFlowDemo
 import com.hongwei.android_lab.lab.compose.demo.helloworld.HelloWorld
+import com.hongwei.android_lab.lab.compose.demo.modifier.ModifierDemo
 import com.hongwei.android_lab.lab.compose.demo.preview.Greetings
 import com.hongwei.android_lab.lab.compose.demo.recomposition.RecompositionDemo
+import com.hongwei.android_lab.lab.compose.demo.reuse.ReuseDemo
 import com.hongwei.android_lab.lab.compose.demo.theming.Theming
 import com.hongwei.android_lab.lab.compose.demo.theming.ThemingDemo
 import com.hongwei.android_lab.lab.compose.view.RatesPage
@@ -44,6 +47,15 @@ fun DemoContent() {
         }
         composable("themingSample") {
             ThemingDemo()
+        }
+        composable("modifier") {
+            ModifierDemo()
+        }
+        composable("dataflow") {
+            DataFlowDemo()
+        }
+        composable("reusability") {
+            ReuseDemo()
         }
         composable("irt") {
             RatesPage()
@@ -83,6 +95,9 @@ val demoSections = listOf(
     DemoSection.Recomposition,
     DemoSection.Theming,
     DemoSection.ThemingSample,
+    DemoSection.ModifierDemo,
+    DemoSection.DataFlow,
+    DemoSection.Reusability,
     DemoSection.IRTRebuild
 )
 
@@ -92,5 +107,8 @@ sealed class DemoSection(val route: String, val label: String) {
     object Recomposition : DemoSection("recomposition", "Recomposition")
     object Theming : DemoSection("theming", "Theming")
     object ThemingSample : DemoSection("themingsample", "Theming Sample")
+    object ModifierDemo : DemoSection("modifier", "Modifier Demo")
+    object DataFlow : DemoSection("dataflow", "Data Flow")
+    object Reusability : DemoSection("reusability", "Reusability")
     object IRTRebuild : DemoSection("irt", "Rebuild rates & info page with Jetpack Compose")
 }
